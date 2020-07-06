@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Klingon.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Klingon.WebApi.Controllers.PrepositionsController.Get">
+            <summary>
+            Retorna número de Preposições existentes.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
