@@ -7,7 +7,7 @@ namespace Klingon.Services
 {
     public class ListVocabulary
     {
-        private KlingonText _text = new KlingonText();
+        private readonly KlingonText _text = new KlingonText();
 
         public string OrderedTextB()
         {

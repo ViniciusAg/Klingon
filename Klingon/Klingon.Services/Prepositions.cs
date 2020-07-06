@@ -9,7 +9,7 @@ namespace Klingon.Services
 {
     public class Prepositions
     {
-        private KlingonText _text = new KlingonText();
+        private readonly KlingonText _text = new KlingonText();
         
         public int CountPrepositions()
         {

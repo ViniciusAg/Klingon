@@ -23,13 +23,11 @@ namespace Klingon.Services
         {
             var requisicaoWeb = WebRequest.CreateHttp(url);
             requisicaoWeb.Method = "GET";
-            using (var resposta = requisicaoWeb.GetResponse())
-            {
-                var streamDados = resposta.GetResponseStream();
-                StreamReader reader = new StreamReader(streamDados);
-                object objResponse = reader.ReadToEnd();
-                return objResponse.ToString();
-            }
+            using var resposta = requisicaoWeb.GetResponse();
+            var streamDados = resposta.GetResponseStream();
+            StreamReader reader = new StreamReader(streamDados);
+            object objResponse = reader.ReadToEnd();
+            return objResponse.ToString();
         }
 
         public string[] Foo()

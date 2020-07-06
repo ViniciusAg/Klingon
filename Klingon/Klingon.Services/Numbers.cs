@@ -8,7 +8,7 @@ namespace Klingon.Services
 {
     public class Numbers
     {
-        private KlingonText _text = new KlingonText();
+        private readonly KlingonText _text = new KlingonText();
         
         public int DistinctBeautifulNumbers()
         {

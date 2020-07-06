@@ -23,10 +23,11 @@ namespace Klingon.WebApi.Controllers
             try
             {
                 var verbs = new Verbs();
-                var result = new List<int>();
-
-                result.Add(verbs.CountVerbs());
-                result.Add(verbs.FirtsPersonVerbs());
+                var result = new List<int>
+                {
+                    verbs.CountVerbs(),
+                    verbs.FirtsPersonVerbs()
+                };
 
                 return Ok(result);
             }
