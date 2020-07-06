@@ -20,8 +20,19 @@ namespace Klingon.WebApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var vocabulary = new ListVocabulary();
-            return Ok(vocabulary.OrderedTextB());
+            try
+            {
+                var vocabulary = new ListVocabulary();
+                return Ok(vocabulary.OrderedTextB());
+            }
+            catch (ArgumentNullException e)
+            {
+                throw new ArgumentNullException($"{e.Message}");
+            }
+            catch (Exception e)
+            {
+                throw new ArgumentNullException($"{e.Message}");
+            }
         }
     }
 }

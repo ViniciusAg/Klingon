@@ -13,7 +13,7 @@ namespace Klingon.WebApi.Controllers
     public class VerbsController : ControllerBase
     {
         /// <summary>
-        /// Retorna número de Verbos existente e quantos deles são em primeira pessoa, respectivamente.
+        /// Retorna número de Verbos existente no Texto B e quantos são em primeira pessoa, respectivamente.
         /// </summary>
         /// <returns></returns>
         // GET: api/Verbs

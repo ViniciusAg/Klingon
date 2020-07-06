@@ -15,7 +15,7 @@ namespace Klingon.WebApi.Controllers
     public class PrepositionsController : ControllerBase
     {
         /// <summary>
-        /// Retorna número de Preposições existentes.
+        /// Retorna número de Preposições existentes no Texto B.
         /// </summary>
         /// <returns></returns>
         // GET: api/Get

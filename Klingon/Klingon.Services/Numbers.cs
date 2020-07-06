@@ -9,9 +9,10 @@ namespace Klingon.Services
     public class Numbers
     {
         private KlingonText _text = new KlingonText();
-        public int BeatefulNumber()
+        
+        public int DistinctBeautifulNumbers()
         {
-            string[] words = _text.GetTextA().Split(" ");
+            string[] words = _text.GetTextB().Split(" ");
             var _alphabet = new Alphabet();
             List<long> total = new List<long>();
             
@@ -30,6 +31,7 @@ namespace Klingon.Services
 
                 if (result >= 440566 && result % 3 == 0)
                 {
+
                     total.Add(result);
                 }
             }

@@ -12,12 +12,27 @@ namespace Klingon.WebApi.Controllers
     [ApiController]
     public class NumbersController : ControllerBase
     {
+        /// <summary>
+        /// Retorna quantos números bonitos existem no Texto B.
+        /// </summary>
+        /// <returns></returns>
         // GET: api/Numbers
         [HttpGet]
         public IActionResult Get()
         {
-            var numbers = new Numbers();
-            return Ok(numbers.BeatefulNumber().ToString());
+            try
+            {
+                var numbers = new Numbers();
+                return Ok(numbers.DistinctBeautifulNumbers());
+            }
+            catch (ArgumentNullException e)
+            {
+                throw new ArgumentNullException($"{e.Message}");
+            }
+            catch (Exception e)
+            {
+                throw new ArgumentNullException($"{e.Message}");
+            }
         }
     }
 }
